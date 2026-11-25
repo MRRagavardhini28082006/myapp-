@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "TamilFlix - Movies and Shows",
+  "short_name": "TamilFlix",
+  "description": "Discover movies, series and shows by type and language.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "icons": [
+    {
+      "src": "tamilflix-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "tamilflix-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#080b14">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TamilFlix">
+    <link rel="manifest" href="tamilflix.webmanifest">
+    <link rel="icon" href="tamilflix-icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>TamilFlix — Movies, series and shows</title>
+    <link rel="stylesheet" href="stile.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="TamilFlix home">TAMIL<span>FLIX</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#collections" class="nav-link">Browse types</a>
+        </nav>
+        <button class="install-app hidden" id="install-app" type="button">Install app</button>
+      </header>
+
+      <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-mark">T</span> YOUR STORYVERSE <span class="eyebrow-location">INDIA</span></p>
+            <h1 id="hero-title"><span class="hero-title-lead">Find your next</span><br><span class="hero-title-accent">favourite story.</span></h1>
+            <p class="hero-description">Big-screen movies, binge-worthy series, Tamil serials and family favourites—all in one vivid place.</p>
+            <div class="hero-actions">
+              <a class="button button-light" href="#collections"><span aria-hidden="true">▦</span> Find your next watch</a>
+              <button class="button button-muted" id="example-search" type="button"><span aria-hidden="true">⌕</span> Explore a movie</button>
+            </div>
+            <p class="hero-tags"><span>Movies</span><i></i><span>Series</span><i></i><span>Tamil shows</span><i></i><span>Family picks</span></p>
+          </div>
+          <aside class="hero-feature hero-gallery" aria-label="Entertainment highlights">
+            <div class="hero-gallery-card">
+              <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="" loading="lazy" decoding="async">
+              <span>Big-screen nights</span>
+            </div>
+            <div class="hero-gallery-card">
+              <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="" loading="lazy" decoding="async">
+              <span>Binge-worthy series</span>
+            </div>
+            <div class="hero-gallery-card">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="" loading="lazy" decoding="async">
+              <span>Live shows &amp; music</span>
+            </div>
+          </aside>
+          <span class="hero-caption">YOUR NEXT STORY STARTS HERE</span>
+        </section>
+
+        <section class="trending-section" id="trending" aria-label="Trending entertainment">
+          <div class="trending-card">
+            <div class="trending-copy">
+              <p class="section-kicker">TRENDING ON JUSTWATCH INDIA</p>
+              <h2>What’s worth watching right now?</h2>
+              <p>Explore popular movies and shows in India, then find where they’re streaming.</p>
+            </div>
+            <a class="button button-light" href="https://www.justwatch.com/in" target="_blank" rel="noopener noreferrer">See what’s trending <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+
+        <section class="collections-section" id="collections" aria-labelledby="collections-title">
+          <div class="section-heading">
+            <div><p class="section-kicker">PICK YOUR NEXT ADVENTURE</p><h2 id="collections-title">What are you in the mood for?</h2></div>
+            <p class="section-subtitle">Choose a type, then explore titles in every language.</p>
+          </div>
+          <div class="category-grid">
+            <button class="category-card category-all" type="button" data-type="all">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">✦</span><strong>All movies, series &amp; shows</strong><small>Every story, every language.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-movies" type="button" data-type="movie">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">▶</span><strong>Movies</strong><small>Choose your next movie night.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-series" type="button" data-type="tv">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">▤</span><strong>TV series</strong><small>Find your next episode.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-web" type="button" data-type="webseries">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">◉</span><strong>Web series</strong><small>Fresh stories, ready to binge.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-kdrama" type="button" data-type="kdrama">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">♡</span><strong>K-dramas</strong><small>Romance, thrills and big feelings.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-serial" type="button" data-type="serial">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">✦</span><strong>TV serials</strong><small>Stories that stay with you.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-reality" type="button" data-type="reality">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">★</span><strong>Reality &amp; talent</strong><small>Bigg Boss and more.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-docs" type="button" data-type="documentary">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">◎</span><strong>Documentaries</strong><small>Real stories, new worlds.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-anime" type="button" data-type="anime">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">✧</span><strong>Anime</strong><small>Animation without limits.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-family" type="button" data-type="family">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">⌂</span><strong>Kids &amp; family</strong><small>Something for everyone.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="category-card category-sports" type="button" data-type="sports">
+              <span class="category-art" aria-hidden="true"></span><span class="category-content"><span class="category-icon">⚽</span><strong>Sports</strong><small>Highlights and sports shows.</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="browse-panel hidden" id="browse-panel" aria-labelledby="browse-title">
+          <div class="browse-panel-heading">
+            <div>
+              <p class="section-kicker">MAKE IT YOURS</p>
+              <h2 id="browse-title">Browse series</h2>
+              <p id="browse-description">Browse in all languages, or choose a language to filter titles.</p>
+            </div>
+          </div>
+          <div class="series-formats hidden" id="series-formats" aria-label="Series formats">
+            <button type="button" class="format-chip active" data-format="series">All series</button>
+            <button type="button" class="format-chip" data-format="tv">TV series</button>
+            <button type="button" class="format-chip" data-format="webseries">Web series</button>
+            <button type="button" class="format-chip" data-format="kdrama">K-drama</button>
+            <button type="button" class="format-chip" data-format="serial">TV serials</button>
+            <button type="button" class="format-chip" data-format="reality">Reality &amp; talent</button>
+            <button type="button" class="format-chip" data-format="documentary">Documentaries</button>
+            <button type="button" class="format-chip" data-format="anime">Anime</button>
+            <button type="button" class="format-chip" data-format="variety">Variety &amp; talk shows</button>
+            <button type="button" class="format-chip" data-format="miniseries">Mini-series</button>
+          </div>
+          <div class="language-picker">
+            <div class="language-picker-heading">
+              <p class="search-field-label">Filter by language <span>(optional)</span></p>
+              <button class="language-reset hidden" id="clear-language" type="button">Clear filter</button>
+            </div>
+            <div class="language-options" id="language-options" aria-label="Choose a language">
+              <button type="button" class="language-chip" data-language="Arabic" aria-pressed="false">Arabic</button>
+              <button type="button" class="language-chip" data-language="Bengali" aria-pressed="false">Bengali</button>
+              <button type="button" class="language-chip" data-language="Chinese" aria-pressed="false">Chinese</button>
+              <button type="button" class="language-chip" data-language="Dutch" aria-pressed="false">Dutch</button>
+              <button type="button" class="language-chip" data-language="English" aria-pressed="false">English</button>
+              <button type="button" class="language-chip" data-language="French" aria-pressed="false">French</button>
+              <button type="button" class="language-chip" data-language="German" aria-pressed="false">German</button>
+              <button type="button" class="language-chip" data-language="Gujarati" aria-pressed="false">Gujarati</button>
+              <button type="button" class="language-chip" data-language="Hindi" aria-pressed="false">Hindi</button>
+              <button type="button" class="language-chip" data-language="Indonesian" aria-pressed="false">Indonesian</button>
+              <button type="button" class="language-chip" data-language="Italian" aria-pressed="false">Italian</button>
+              <button type="button" class="language-chip" data-language="Japanese" aria-pressed="false">Japanese</button>
+              <button type="button" class="language-chip" data-language="Kannada" aria-pressed="false">Kannada</button>
+              <button type="button" class="language-chip" data-language="Korean" aria-pressed="false">Korean</button>
+              <button type="button" class="language-chip" data-language="Malayalam" aria-pressed="false">Malayalam</button>
+              <button type="button" class="language-chip" data-language="Marathi" aria-pressed="false">Marathi</button>
+              <button type="button" class="language-chip" data-language="Mandarin" aria-pressed="false">Mandarin</button>
+              <button type="button" class="language-chip" data-language="Persian" aria-pressed="false">Persian</button>
+              <button type="button" class="language-chip" data-language="Polish" aria-pressed="false">Polish</button>
+              <button type="button" class="language-chip" data-language="Portuguese" aria-pressed="false">Portuguese</button>
+              <button type="button" class="language-chip" data-language="Punjabi" aria-pressed="false">Punjabi</button>
+              <button type="button" class="language-chip" data-language="Russian" aria-pressed="false">Russian</button>
+              <button type="button" class="language-chip" data-language="Spanish" aria-pressed="false">Spanish</button>
+              <button type="button" class="language-chip" data-language="Swedish" aria-pressed="false">Swedish</button>
+              <button type="button" class="language-chip" data-language="Tamil" aria-pressed="false">Tamil</button>
+              <button type="button" class="language-chip" data-language="Telugu" aria-pressed="false">Telugu</button>
+              <button type="button" class="language-chip" data-language="Thai" aria-pressed="false">Thai</button>
+              <button type="button" class="language-chip" data-language="Turkish" aria-pressed="false">Turkish</button>
+              <button type="button" class="language-chip" data-language="Urdu" aria-pressed="false">Urdu</button>
+              <button type="button" class="language-chip" data-language="Vietnamese" aria-pressed="false">Vietnamese</button>
+            </div>
+          </div>
+          <div class="browse-controls">
+            <label class="search-field" for="browse-title-search">Search movies, TV shows and serials
+              <input id="browse-title-search" type="search" placeholder="Try Bigg Boss or a movie title" autocomplete="off">
+            </label>
+          </div>
+          <p class="language-note">Language is optional: leave it unselected to browse titles in all languages. Search for a title anytime, then use its availability link to confirm providers, audio language and price.</p>
+          <div id="browse-results" class="search-results" aria-live="polite"></div>
+        </section>
+
+      </main>
+      <footer><span class="brand footer-brand">TAMIL<span>FLIX</span></span><p>Discover titles across genres and formats. Availability varies by region; confirm a listing is free before watching. Clip searches are for official trailers and clips—check that the uploader is the rights holder or an authorized channel.</p><p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p><details class="install-help"><summary>Install on your phone</summary><p>Android: open your browser menu and choose Install app or Add to Home screen. iPhone or iPad: tap Share, then Add to Home Screen.</p><p>After you publish code changes to this website, open or refresh the app while online to get the latest version. The app keeps a cached copy for offline use.</p></details></footer>
+    </div>
+    <nav class="mobile-nav" aria-label="App navigation">
+      <a class="mobile-nav-item active" data-tab="home" href="#home" aria-current="page"><span aria-hidden="true">⌂</span><span>Home</span></a>
+      <a class="mobile-nav-item" data-tab="browse" href="#collections"><span aria-hidden="true">▦</span><span>Browse</span></a>
+      <button class="mobile-nav-item" data-tab="search" id="mobile-search" type="button"><span aria-hidden="true">⌕</span><span>Search</span></button>
+      <a class="mobile-nav-item" data-tab="trending" href="#trending"><span aria-hidden="true">✦</span><span>Trending</span></a>
+    </nav>
+  </body>
+</html>
